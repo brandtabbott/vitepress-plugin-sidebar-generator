@@ -31,11 +31,17 @@ npm install vitepress-plugin-sidebar-generator --save-dev
 4. Import and use the plugin in your VitePress configuration:
 
 ```javascript
+import sidebar from './sidebar.json';
 import sidebarGenerator from "vitepress-plugin-sidebar-generator";
 
 export default defineConfig{
   ...
 
+  themeConfig: {
+    ...
+
+    sidebar: sidebar
+  },
   vite: {
     plugins: [
       sidebarGenerator({
