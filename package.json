@@ -1,0 +1,25 @@
+{
+  "name": "vitepress-plugin-sidebar-generator",
+  "version": "1.0.0",
+  "description": "A VitePress plugin that dynamically creates/updates your sidebar",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandtabbott/vitepress-plugin-sidebar-generator.git"
+  },
+  "author": "Brandt A. Abbott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brandtabbott/vitepress-plugin-sidebar-generator/issues"
+  },
+  "homepage": "https://github.com/brandtabbott/vitepress-plugin-sidebar-generator#readme",
+  "type": "module",
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "glob": "^10.3.10",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  }
+}
