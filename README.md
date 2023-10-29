@@ -4,7 +4,8 @@ This VitePress plugin automatically generates and updates the sidebar for your d
 
 ## Features
 
-The plugin will watch for changes in your Markdown files and automatically update a `sidebar.json` file.
+- Updates the VitePress config before it is resolved.
+- Watches for changes in your Markdown files and automatically updates a `sidebar.json` file.
 
 ## Installation
 
@@ -17,7 +18,7 @@ npm install vitepress-plugin-sidebar-generator --save-dev
 ## Usage
 
 1. Configure your VitePress project.
-2. Create a sidebar.json file (the plugin will look for it in docs/.vitepress/sidebar.json by default) with an empty object
+2. Create a sidebar.json file (the plugin will look for it in docs/.vitepress/sidebar.json by default) with an empty object. An existing sidebar configuration will work as well; just copy/paste it into a .json file.
 3. Create a configuration object with the following options:
 
    - `docsDir` (default: "docs"): Specify the documentation directory.
