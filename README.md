@@ -40,11 +40,7 @@ export default defineConfig{
     plugins: [
       sidebarGenerator({
         docsDir: "docs",
-        includeDirs: [],
-        ignoreFiles: [],
-        collapsible: true, // Optional, default: true
-        collapsed: false, // Optional, default: false
-        sidebarFile: "docs/.vitepress/sidebar.json", // Optional, default: "docs/.vitepress/sidebar.json"
+        includeDirs: ["components"],
       }),
     ],
   }

@@ -1,6 +1,6 @@
 {
   "name": "vitepress-plugin-sidebar-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A VitePress plugin that dynamically creates/updates your sidebar",
   "main": "src/index.js",
   "repository": {
