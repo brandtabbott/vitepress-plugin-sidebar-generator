@@ -38,7 +38,7 @@ export default (options) => {
       vitepressConfig.vitepress.userConfig.themeConfig.sidebar = sidebar;
     },
 
-    // Watch for changes to .md file additions and deletions when the dever server is running
+    // Watch for changes to .md file additions and deletions when the dev server is running
     configureServer() {
       const watcher = watch(config.docsDir, {
         ignoreInitial: true,

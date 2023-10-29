@@ -1,4 +1,4 @@
-# VitePress Plugin: Sidebar Generator
+# VitePress Plugin - Sidebar Generator
 
 This VitePress plugin automatically generates and updates the sidebar for your documentation based on the structure of your Markdown files.
 
