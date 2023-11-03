@@ -1,4 +1,4 @@
-import { startCase, assign } from "lodash-es";
+import { startCase, merge } from "lodash-es";
 import { watch } from "chokidar";
 import * as fs from "fs";
 import * as glob from "glob";
@@ -38,7 +38,7 @@ export default (options) => {
       vitepressConfig.vitepress.userConfig.themeConfig.sidebar = sidebar;
     },
 
-    // Watch for changes to .md file additions and deletions when the dev server is running
+    // Watch for .md file add and unlink when the dev server is running
     configureServer() {
       const watcher = watch(config.docsDir, {
         ignoreInitial: true,
@@ -50,8 +50,8 @@ export default (options) => {
         }
       };
 
-      watcher.on("unlink", handleFileChange);
       watcher.on("add", handleFileChange);
+      watcher.on("unlink", handleFileChange);
     },
   };
 };
@@ -67,7 +67,7 @@ function mergeSidebar(config) {
     const sidebar = getSidebar(docsDir, includeDirs, ignoreFiles, collapsible, collapsed);
 
     // Merge the sidebar object into the sidebar file contents
-    assign(sidebarContent, sidebar);
+    merge(sidebarContent, sidebar);
 
     fs.writeFileSync(sidebarFile, JSON.stringify(sidebarContent, null, 2));
     return sidebarContent;
@@ -78,8 +78,7 @@ function mergeSidebar(config) {
 }
 
 function readSidebarFileSync(sidebarFile) {
-  const file = `./${sidebarFile}`;
-  if (fs.existsSync(file)) {
+  if (fs.existsSync(sidebarFile)) {
     return JSON.parse(fs.readFileSync(file, "utf8"));
   } else {
     return {};

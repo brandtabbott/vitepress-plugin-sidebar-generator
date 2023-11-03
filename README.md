@@ -5,7 +5,7 @@ This VitePress plugin automatically generates and updates the sidebar for your d
 ## Features
 
 - Updates the VitePress config before it is resolved.
-- Watches for changes in your Markdown files and automatically updates a `sidebar.json` file.
+- Watches for additions/deletions in your Markdown files and automatically updates a `sidebar.json` file.
 
 ## Installation
 
